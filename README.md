@@ -1,132 +1,152 @@
-# 🚍 Sistema Inteligente de Rutas - TransMilenio (Bogotá)
+# 🚍 Sistema Inteligente de Transporte - TransMilenio (IA)
 
-## 📌 Descripción
+## 📌 Descripción del proyecto
 
-Este proyecto implementa un sistema inteligente basado en **Inteligencia Artificial**, específicamente en técnicas de **búsqueda heurística (Algoritmo A*)** y **sistemas basados en reglas**, con el objetivo de encontrar la mejor ruta entre dos estaciones del sistema de transporte masivo TransMilenio en Bogotá.
+Este proyecto implementa diferentes técnicas de **Inteligencia Artificial** aplicadas al sistema de transporte TransMilenio en Bogotá.
 
-El sistema modela las estaciones como nodos y las conexiones como un grafo con costos asociados (tiempo estimado de viaje).
+Se desarrollan tres enfoques principales:
+
+* 🔎 Búsqueda heurística (Algoritmo A*)
+* 🤖 Aprendizaje supervisado (Regresión y Random Forest)
+* 🧠 Aprendizaje no supervisado (K-Means)
+
+El objetivo es modelar, analizar y optimizar rutas y tiempos de viaje dentro del sistema de transporte.
 
 ---
 
 ## 🧠 Tecnologías utilizadas
 
 * Python 3
-* Algoritmo A* (A estrella)
-* Programación Orientada a Objetos (POO)
+* Pandas
+* Scikit-learn
+* Algoritmos de búsqueda (A*)
+* Machine Learning
 
 ---
 
-## ⚙️ Requisitos
+## 📂 Estructura del proyecto
 
-Antes de ejecutar el proyecto, asegúrate de tener instalado:
+```
+Sistema_Transporte_Astar/
+│
+├── busqueda_astar/
+│   └── codigo_astar.py
+│
+├── aprendizaje_supervisado/
+│   ├── modelo_regresion.py
+│   ├── modelo_random_forest.py
+│   └── dataset_transmilenio.csv
+│
+├── aprendizaje_no_supervisado/
+│   ├── modelo_kmeans.py
+│   └── dataset_transmilenio.csv
+│
+├── documentos/
+│   ├── pruebas_astar.pdf
+│   ├── pruebas_supervisado.pdf
+│   └── pruebas_no_supervisado.pdf
+│
+└── README.md
+```
 
-* Python 3.x
+---
 
-Verifica con:
+## 🔎 Módulo 1: Búsqueda con A*
+
+Se implementa el algoritmo A* para encontrar la mejor ruta entre estaciones.
+
+📌 Características:
+
+* Representación del sistema como grafo
+* Uso de heurística
+* Optimización de rutas
+
+▶️ Ejecución:
 
 ```bash
-python --version
+python busqueda_astar/codigo_astar.py
 ```
 
 ---
 
-## ▶️ Instrucciones de ejecución
+## 🤖 Módulo 2: Aprendizaje Supervisado
 
-1. Clonar el repositorio:
+Se desarrollan modelos para predecir el tiempo de viaje.
+
+### Modelos utilizados:
+
+* Regresión Lineal
+* Random Forest
+
+📊 Variables:
+
+* Origen
+* Destino
+* Distancia
+* Tráfico
+* Hora
+
+▶️ Ejecución:
 
 ```bash
-git clone https://github.com/TU_USUARIO/ia-transmilenio.git
+python aprendizaje_supervisado/modelo_random_forest.py
 ```
 
-2. Ingresar a la carpeta del proyecto:
+---
+
+## 🧠 Módulo 3: Aprendizaje No Supervisado
+
+Se implementa K-Means para identificar patrones en los datos.
+
+📌 Objetivo:
+Agrupar rutas según características similares.
+
+▶️ Ejecución:
 
 ```bash
-cd ia-transmilenio
+python aprendizaje_no_supervisado/modelo_kmeans.py
 ```
 
-3. Ejecutar el programa:
+---
+
+## ⚙️ Instalación
+
+Instalar dependencias:
 
 ```bash
-python codigo.py
+pip install pandas scikit-learn
 ```
 
 ---
 
-## 🗺️ Funcionamiento del sistema
+## 📊 Resultados
 
-El sistema representa una red simplificada de TransMilenio con estaciones como:
-
-* Portal Norte
-* Calle 100
-* Calle 72
-* Av. Jiménez
-* Portal Sur
-
-El algoritmo A* evalúa:
-
-* El costo real del recorrido (tiempo)
-* Una heurística (estimación al destino)
-
-Y selecciona la ruta más eficiente.
+* Optimización de rutas mediante A*
+* Predicción de tiempos con Machine Learning
+* Agrupación de patrones con clustering
 
 ---
 
-## 🧪 Ejemplo de ejecución
+## 📄 Documentación
 
-Entrada:
+El proyecto incluye:
 
-```
-Origen: Portal Norte  
-Destino: Portal Sur  
-```
-
-Salida esperada:
-
-```
-Mejor ruta encontrada:
-→ Portal Norte
-→ Calle 100
-→ Calle 72
-→ Av. Jiménez
-→ Portal Sur
-```
+* PDF con pruebas A*
+* PDF aprendizaje supervisado
+* PDF aprendizaje no supervisado
 
 ---
 
-## 📚 Conceptos aplicados
+## 👥 Integrantes
 
-* Sistemas basados en reglas
-* Representación del conocimiento
-* Búsqueda heurística
-* Algoritmo A*
+* William Latorre
+
 
 ---
 
-## 🎥 Video del proyecto
+## 📌 Conclusión
 
-Link al video explicativo (máx. 5 minutos):
-
-👉 [PEGAR LINK DEL VIDEO AQUÍ]
-
----
-
-## 📄 Documento de pruebas
-
-El documento PDF con las pruebas realizadas se encuentra en el repositorio.
-
----
-
-## 👥 Integrantes del equipo
-
-* Nombre 1
-* Nombre 2
-* Nombre 3
-
----
-
-## 📌 Notas adicionales
-
-Este proyecto es una simulación académica del sistema TransMilenio y no representa rutas reales exactas.
+Este proyecto demuestra cómo diferentes técnicas de Inteligencia Artificial pueden integrarse para resolver problemas reales en sistemas de transporte, desde la búsqueda de rutas hasta la predicción y análisis de datos.
 
 ---
 

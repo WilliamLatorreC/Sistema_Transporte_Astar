@@ -1,0 +1,11 @@
+origen,destino,distancia_km,trafico,hora,tiempo_min
+Portal Norte,Calle 100,5,medio,8,12
+Portal Norte,Calle 72,8,alto,18,20
+Calle 100,Calle 72,4,alto,17,15
+Calle 72,Av. Jiménez,6,medio,12,14
+Av. Jiménez,Portal Sur,10,alto,19,25
+Portal Norte,Av. Jiménez,12,bajo,6,18
+Calle 72,Portal Sur,7,medio,14,16
+Portal Sur,Portal Norte,15,alto,20,30
+Calle 100,Portal Sur,11,medio,9,22
+Av. Jiménez,Calle 100,9,bajo,7,17
